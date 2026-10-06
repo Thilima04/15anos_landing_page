@@ -20,6 +20,9 @@ Toques no papel criam uma pequena chuva de estrelas; os botões
 mantêm suas ações normais. As animações pausam quando a aba fica em
 segundo plano e retomam automaticamente ao voltar ao convite.
 Layout adaptável a celular e computador.
+Em celulares, os textos têm tamanho mínimo de 18px, os detalhes quebram
+em linhas e a confirmação aparece centralizada com botão de 48px.
+Layout conferido em larguras de 320, 390, 430 e 768 pixels, sem rolagem lateral.
 
 PUBLICAÇÃO
 Publique index.html, style.css, script.js e floral-background.png

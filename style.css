@@ -1,6 +1,6 @@
 :root{--olive:#293d13;--gold:#ab7a15;--cream:#f4f2de;--ink:#182312;color-scheme:light}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;color:var(--ink);background:#dde4cc;font-family:"Cormorant Garamond",Georgia,serif;background-image:radial-gradient(ellipse at 50% 20%,#f6f4e6,transparent 70%);min-height:100svh}
 .svg-library{position:absolute;width:0;height:0;overflow:hidden}
 .shell{padding:28px 20px;display:flex;justify-content:center}
@@ -25,14 +25,15 @@ h1{z-index:5;color:#243808;-webkit-text-fill-color:#243808;-webkit-text-stroke:.
 .message p{margin:0}
 .message .divider{margin:17px 0 10px}
 .details{margin:23px auto 19px;width:92%;display:grid;gap:13px}
-.detail-row{display:grid;grid-template-columns:8.3cqi 1fr;gap:3.1cqi;align-items:center}
+.detail-row{display:grid;grid-template-columns:8.3cqi minmax(0,1fr);gap:3.1cqi;align-items:center}
 .icon{width:8.3cqi;height:8.3cqi;min-width:44px;min-height:44px;display:grid;place-items:center;border-radius:50%;color:#fffdf0;background:radial-gradient(circle at 30% 25%,#667b36,#33491b);border:2px solid #c39b37;box-shadow:inset 0 0 0 3px #f5f1d7,0 2px 8px #3b491416}
 .icon svg{width:62%;height:62%;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.detail-copy{border-left:1px solid var(--gold);padding:3px 0 3px 3.1cqi}
+.detail-copy{min-width:0;border-left:1px solid var(--gold);padding:3px 0 3px 3.1cqi;overflow-wrap:break-word}
 .detail-copy h2{font-size:clamp(12px,1.7cqi,16px);letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--olive);margin:0 0 4px}
 .detail-copy p{font-size:clamp(16px,2.65cqi,24px);line-height:1.13;letter-spacing:.035em;text-transform:uppercase;font-weight:500;margin:0}
 .rsvp{display:flex;align-items:center;gap:3cqi;margin:0 -2%;border:2px solid var(--gold);border-radius:24px;padding:16px 4%;background:#f6f4df40}
 .rsvp .icon{flex-shrink:0}
+.rsvp-copy{min-width:0;overflow-wrap:break-word}
 .rsvp h2{font-size:clamp(19px,2.7cqi,25px);letter-spacing:.16em;color:var(--olive);margin:0 0 3px}
 .rsvp p{font-size:clamp(16px,2.3cqi,22px);line-height:1.12;margin:0 0 8px}
 .whatsapp-btn{font:600 clamp(13px,1.75cqi,17px) "Cormorant Garamond",Georgia,serif;letter-spacing:.035em;border:1px solid #9e772a;border-radius:30px;background:var(--olive);color:#fff9e8;padding:10px 18px;min-height:44px;cursor:pointer;box-shadow:0 3px 10px #293d131a;transition:background .2s,transform .2s,box-shadow .2s}
@@ -84,4 +85,52 @@ footer .divider{animation-delay:3s}
 @keyframes signature-glow{0%,100%{text-shadow:0 0 0 #c7a34300}50%{text-shadow:0 1px 1px #d6ba5255,0 0 14px #c7a34322}}
 @keyframes rsvp-aura{0%,100%{box-shadow:0 0 0 #d7b15200}50%{box-shadow:0 0 26px #d7b15230,inset 0 0 16px #f9e7a321}}
 @media(min-width:1000px){.shell{padding:40px 24px}}
-@media(max-width:560px){.shell{padding:0}.invite-card{box-shadow:none}.invite-content{padding:12% 12% 10%}.crown-ornament{margin-bottom:14px}.crown-ornament svg{width:18cqi}h1{font-size:19cqi;margin:0 -10%;line-height:1.2}.subtitle{font-size:3.7cqi;letter-spacing:.14em}.floral{font-size:18px;margin:7px 0}.message{margin-top:18px;line-height:1.35}.message .divider{margin:18px 0 12px}.details{margin:25px 0;width:100%;gap:17px}.detail-row{grid-template-columns:46px 1fr;gap:14px}.icon{width:46px;height:46px}.detail-copy{padding-left:14px}.rsvp{margin:0 -2%;padding:16px 12px;gap:12px;border-radius:18px}.rsvp p{line-height:1.2}.rsvp .icon{width:44px;height:44px;min-width:44px}.whatsapp-btn{padding:9px 12px}.gift{font-size:10cqi}footer{margin-top:20px}.final-ornament{margin-top:20px}}
+@media(max-width:560px){
+  .shell{padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+  .invite-card{box-shadow:none}
+  .invite-content{padding:clamp(42px,12vw,64px) 10% clamp(48px,12vw,64px)}
+  .crown-ornament{margin-bottom:14px;gap:10px}
+  .crown-ornament svg{width:18vw;max-width:86px}
+  .crown-ornament span{width:14vw}
+  h1{font-size:clamp(54px,18vw,100px);margin:0 -5%;line-height:1.25;-webkit-text-stroke:.35px #b08a36}
+  .subtitle{font-size:clamp(12px,3.65vw,20px);letter-spacing:.12em;margin:6px -4%}
+  .subtitle span{padding:0 .1em}
+  .floral{font-size:18px;margin:7px 0}
+  .divider:before,.divider:after{width:18vw}
+  .message{font-size:clamp(18px,4.65vw,22px);margin-top:22px;line-height:1.4;letter-spacing:0;text-wrap:pretty}
+  .message .divider{margin:22px 0 16px}
+  .details{margin:28px 0;width:100%;gap:21px}
+  .detail-row{grid-template-columns:46px minmax(0,1fr);gap:12px}
+  .icon{width:46px;height:46px}
+  .detail-copy{padding-left:12px}
+  .detail-copy h2{font-size:12px;letter-spacing:.14em;margin-bottom:5px}
+  .detail-copy p{font-size:clamp(16px,4.2vw,20px);line-height:1.28;letter-spacing:.015em}
+  .rsvp{display:block;text-align:center;margin:0;padding:20px 14px;border-radius:18px;background:#f6f4df80}
+  .rsvp .icon{width:48px;height:48px;margin:0 auto 12px}
+  .rsvp h2{font-size:22px}
+  .rsvp p{font-size:18px;line-height:1.35;margin:8px 0 14px}
+  .rsvp p br{display:none}
+  .whatsapp-btn{display:block;width:100%;min-height:48px;padding:12px 10px;font-size:16px;touch-action:manipulation}
+  .gift{font-size:clamp(34px,9.5vw,52px);line-height:1.15}
+  footer{margin-top:24px}
+  .final-ornament{margin-top:20px}
+}
+@supports not (width:1cqi){
+  h1{font-size:clamp(54px,16vw,146px)}
+  .crown-ornament svg{width:clamp(56px,14vw,126px)}
+  .crown-ornament span{width:clamp(40px,11vw,99px)}
+  .subtitle{font-size:clamp(12px,3.35vw,30px)}
+  .divider:before,.divider:after{width:clamp(40px,16vw,144px)}
+  .floral{font-size:20px}
+  .message{font-size:clamp(18px,2.85vw,26px)}
+  .detail-row{grid-template-columns:clamp(46px,8.3vw,75px) minmax(0,1fr);gap:14px}
+  .icon{width:clamp(46px,8.3vw,75px);height:clamp(46px,8.3vw,75px)}
+  .detail-copy{padding-left:14px}
+  .detail-copy h2{font-size:14px}
+  .detail-copy p{font-size:clamp(16px,2.65vw,24px)}
+  .rsvp{gap:14px}
+  .rsvp h2{font-size:22px}
+  .rsvp p{font-size:18px}
+  .whatsapp-btn{font-size:16px}
+  .gift{font-size:clamp(34px,6vw,58px)}
+}
