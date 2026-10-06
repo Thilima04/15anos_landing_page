@@ -31,6 +31,11 @@ h1{z-index:5;color:#243808;-webkit-text-fill-color:#243808;-webkit-text-stroke:.
 .detail-copy{min-width:0;border-left:1px solid var(--gold);padding:3px 0 3px 3.1cqi;overflow-wrap:break-word}
 .detail-copy h2{font-size:clamp(12px,1.7cqi,16px);letter-spacing:.19em;text-transform:uppercase;font-weight:600;color:var(--olive);margin:0 0 4px}
 .detail-copy p{font-size:clamp(16px,2.65cqi,24px);line-height:1.13;letter-spacing:.035em;text-transform:uppercase;font-weight:500;margin:0}
+.event-hour{font-size:1.2em;font-weight:600;font-variant-numeric:lining-nums tabular-nums;letter-spacing:.025em;white-space:nowrap}
+.location-link{color:inherit;text-decoration:none;touch-action:manipulation}
+.location-link:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:4px}
+.map-hint{display:inline-block;margin-top:6px;font-size:14px;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.location-link:hover .map-hint{color:var(--olive)}
 .rsvp{display:flex;align-items:center;gap:3cqi;margin:0 -2%;border:2px solid var(--gold);border-radius:24px;padding:16px 4%;background:#f6f4df40}
 .rsvp .icon{flex-shrink:0}
 .rsvp-copy{min-width:0;overflow-wrap:break-word}
