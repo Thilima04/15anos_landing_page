@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="effects-enabled">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#e8ecd5">
+  <title>Júlia Lima — Meus Quinze Anos</title>
+  <meta name="description" content="Uma noite de sonhos, gratidão e novas histórias. Celebre os quinze anos de Júlia Lima em 7 de março de 2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="calendar" viewBox="0 0 48 48"><rect x="7" y="11" width="34" height="31" rx="3"/><path d="M7 20h34M15 6v10M33 6v10M15 27h2m6 0h2m6 0h2M15 34h2m6 0h2m6 0h2"/></symbol>
+    <symbol id="clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M24 12v13l9 6"/></symbol>
+    <symbol id="pin" viewBox="0 0 48 48"><path d="M24 43S10 26 10 17a14 14 0 0 1 28 0c0 9-14 26-14 26Z"/><circle cx="24" cy="17" r="5"/></symbol>
+    <symbol id="dress" viewBox="0 0 48 48"><path d="m18 5 6 4 6-4 2 10-4 6c6 7 9 15 11 22H9c2-7 5-15 11-22l-4-6 2-10ZM20 21h8"/></symbol>
+    <symbol id="envelope" viewBox="0 0 48 48"><rect x="5" y="10" width="38" height="28" rx="2"/><path d="m6 12 18 15 18-15M6 37l13-14m23 14L29 23"/></symbol>
+  </svg>
+  <main class="shell">
+    <article class="invite-card" aria-label="Convite para os quinze anos de Júlia Lima">
+      <canvas id="sparkles" aria-hidden="true"></canvas>
+      <div class="paper-shimmer" aria-hidden="true"></div>
+      <div class="invite-content">
+        <header class="hero reveal">
+          <div class="crown-ornament" aria-hidden="true"><span></span><svg viewBox="0 0 120 72" fill="none"><path d="M9 61Q60 35 111 61M9 61Q-1 42 22 45Q1 18 35 38Q21 6 49 29Q39 9 53 13Q50-5 60 3Q70-5 67 13Q81 9 71 29Q99 6 85 38Q119 18 98 45Q121 42 111 61M60 55Q36 33 45 30Q54 26 60 45Q66 26 75 30Q84 33 60 55M18 56l8-5m76 5-8-5M60 15v9"/></svg><span></span></div>
+          <h1>Júlia Lima<span class="name-heart" aria-hidden="true">♡</span></h1>
+          <div class="divider floral" aria-hidden="true">✥</div>
+          <p class="subtitle"><span aria-hidden="true">✦</span> Meus Quinze Anos <span aria-hidden="true">✦</span></p>
+          <div class="divider floral" aria-hidden="true">✥</div>
+        </header>
+        <section class="message reveal" aria-label="Uma mensagem especial">
+          <p>Aos meus pais, que com amor, dedicação e renúncia guiaram meus passos até aqui e tornaram este sonho realidade: a minha eterna gratidão.</p>
+          <div class="divider" aria-hidden="true">♥</div>
+          <p>Existem momentos que são eternizados pelo tempo, mas os mais belos são aqueles compartilhados com as pessoas que mais amamos.<br>Com imensa alegria, convido você e sua família para celebrarem comigo a chegada dos meus quinze anos, uma noite de sonhos, gratidão e novas histórias.</p>
+        </section>
+        <section class="details" aria-label="Detalhes da celebração">
+          <div class="detail-row reveal"><div class="icon"><svg aria-hidden="true"><use href="#calendar"/></svg></div><div class="detail-copy"><h2>Data</h2><p><time datetime="2027-03-07T10:00:00-03:00">Sétimo dia de março<br>de dois mil e vinte e sete</time></p></div></div>
+          <div class="detail-row reveal"><div class="icon"><svg aria-hidden="true"><use href="#clock"/></svg></div><div class="detail-copy"><h2>Horário</h2><p>Às dez horas</p></div></div>
+          <div class="detail-row reveal"><div class="icon"><svg aria-hidden="true"><use href="#pin"/></svg></div><div class="detail-copy"><h2>Local</h2><p>Rua Luis Alves da Rocha, 188</p></div></div>
+          <div class="detail-row reveal"><div class="icon"><svg aria-hidden="true"><use href="#dress"/></svg></div><div class="detail-copy"><h2>Traje</h2><p>Esporte fino / gala</p></div></div>
+        </section>
+        <section class="rsvp reveal" aria-labelledby="rsvp-heading">
+          <div class="icon"><svg aria-hidden="true"><use href="#envelope"/></svg></div>
+          <div class="rsvp-copy"><h2 id="rsvp-heading">RSVP</h2><p>Favor confirmar sua presença até o dia<br><strong>20 de fevereiro de 2027</strong>.</p><button class="whatsapp-btn" id="whatsappBtn" type="button">Confirmar presença <span aria-hidden="true">↗</span></button><p id="rsvp-status" class="rsvp-status" role="status" hidden></p></div>
+        </section>
+        <footer class="reveal"><div class="divider" aria-hidden="true">♥</div><p class="gift">Sua presença é o nosso<br>maior presente.</p><div class="divider final-ornament" aria-hidden="true">♡</div></footer>
+      </div>
+    </article>
+  </main>
+  <script src="script.js?v=5"></script>
+</body>
+</html>
