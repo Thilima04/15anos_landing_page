@@ -41,6 +41,7 @@ h1{z-index:5;color:#243808;-webkit-text-fill-color:#243808;-webkit-text-stroke:.
 .rsvp{display:flex;align-items:center;gap:3cqi;margin:0 -2%;border:2px solid var(--gold);border-radius:24px;padding:16px 4%;background:#f6f4df40}
 .rsvp .icon{flex-shrink:0}
 .rsvp-copy{min-width:0;overflow-wrap:break-word}
+.rsvp-copy strong{font-size:inherit;font-variant-numeric:lining-nums;font-weight:600}
 .rsvp h2{font-size:clamp(19px,2.7cqi,25px);letter-spacing:.16em;color:var(--olive);margin:0 0 3px}
 .rsvp p{font-size:clamp(16px,2.3cqi,22px);line-height:1.12;margin:0 0 8px}
 .whatsapp-btn{font:600 clamp(13px,1.75cqi,17px) "Cormorant Garamond",Georgia,serif;letter-spacing:.035em;border:1px solid #9e772a;border-radius:30px;background:var(--olive);color:#fff9e8;padding:10px 18px;min-height:44px;cursor:pointer;box-shadow:0 3px 10px #293d131a;transition:background .2s,transform .2s,box-shadow .2s}
