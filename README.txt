@@ -25,7 +25,24 @@ em linhas e a confirmação aparece centralizada com botão de 48px.
 Layout conferido em larguras de 320, 390, 430 e 768 pixels, sem rolagem lateral.
 
 PUBLICAÇÃO
-Publique index.html, style.css, script.js e floral-background.png
-na mesma pasta. As fontes do Google precisam de conexão;
-sem conexão, o navegador usa as fontes alternativas.
-convite-julia.png é a arte anterior e não é usada pela página.
+Publique index.html, style.css, script.js, robots.txt, vercel.json
+e a pasta assets inteira, preservando sua estrutura.
+As imagens WebP e as fontes WOFF2 são locais: não há requisições
+ao Google Fonts durante a visita. As licenças estão em assets/fonts.
+vercel.json configura cache dos recursos na Vercel.
+As imagens PNG e as prévias JPG são fontes/arquivos de revisão;
+não são baixadas pela página e podem ficar fora da publicação.
+
+OTIMIZAÇÕES DE DESEMPENHO
+Fundo original: 2.030.006 bytes. Versões entregues: 39.708 bytes
+(480px), 82.642 bytes (768px), 123.722 bytes (1024px).
+O navegador antecipa a imagem adequada e as duas fontes locais.
+O conteúdo inicial não depende das animações de entrada.
+As animações CSS contínuas usam transform/opacity; luzes, sombras
+e pétalas do canvas são preparadas uma vez e reutilizadas.
+O canvas cobre apenas a tela visível, limita a resolução a 1,5x
+e desenha até 30 quadros por segundo; pausa fora da área visível.
+Os efeitos continuam automáticos, sem botão de ativação.
+
+Para recriar imagens e obter as fontes: python tools/prepare-assets.py
+(requer Pillow; o download inicial das fontes requer internet).

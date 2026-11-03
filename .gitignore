@@ -1,0 +1,15 @@
+# Arquivos locais e pacotes de publicação
+*.zip
+preview*.jpg
+__pycache__/
+*.py[cod]
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Relatórios de auditoria locais
+lighthouse-*.report.*
